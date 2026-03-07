@@ -4,44 +4,53 @@
     <title>SharkPools Extension Collection</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta content="SharkPools Extension Collection" property="og:title">
-    <meta content="SharkPools collection of TurboWarp Extensions. Most either made by or contributed to by SharkPool." property="og:description">
-    <meta content="https://sharkpools-extensions.vercel.app/" property="og:url">
-    <meta content="https://raw.githubusercontent.com/SharkPool-SP/SharkPools-Extensions/main/pages/SP_Text.png" property="og:image">
-    <meta content="#00a6ff" data-react-helmet="true" name="theme-color">
 
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="SharkPools Extension Collection">
+    <meta property="og:description" content="SharkPool's collection of TurboWarp Extensions. Most either made by or contributed to by SharkPool.">
+    <meta property="og:url" content="/">
+    <meta property="og:image" content="/pages/SP_Text.png">
+    <meta name="theme-color" content="#00a6ff" data-react-helmet="true">
+
+    <!-- Terser Import -->
     <script type="module">
-      // Import the Terser Library for Code Compression
       import("https://cdn.jsdelivr.net/npm/terser@5.30.0/+esm").then(module => {
         window.Terser = module;
       });
     </script>
 
+    <!-- Favicon -->
     <link rel="icon" href="pages/SP_Text.png">
+
+    <!-- Stylesheets -->
     <link href="pages/css/main.css" rel="stylesheet">
     <link href="pages/css/custom-scroller.css" rel="stylesheet">
 
     <!-- Lilita One Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
   </head>
+
   <body style="background-color: #111111">
     <div class="navBar">
       <img class="toHost" draggable="false" src="pages/main-assets/logo-TW.svg" onclick="window.open('https://turbowarp.org')">
       <div class="navHeader">
         <span class="title">SharkPool's Extension Collection</span>
-        <span class="header">SharkPool's collection of TurboWarp Extensions. Most either made by or contributed to by SharkPool. Hover for more Details. 
+        <span class="header">
+          SharkPool's collection of TurboWarp Extensions. Most either made by or contributed to by SharkPool. Hover for more Details.
           <br><span style="color: pink">Please Load Extensions Unsandboxed, otherwise they will not Load.</span>
         </span>
       </div>
       <img class="toSP" draggable="false" src="pages/main-assets/SP.svg" onclick="window.open('https://www.youtube.com/channel/UC26hvmetqYgNB3oFewV_gtg')">
     </div>
+
     <div class="innerNav">
       <img class="navImg" id="settings" draggable="false" src="pages/main-assets/settings.svg">
       <div class="tagBar"></div>
       <img class="navImg" id="contributors" draggable="false" src="pages/main-assets/contributors.svg">
     </div>
+
     <div class="innerNav">
       <img class="navImgBig" draggable="false" id="refreshTags" src="pages/main-assets/refresh.svg">
       <button class="donateBtn">
@@ -50,15 +59,17 @@
       </button>
       <img class="navImgBig" draggable="false" id="gitRepo" src="pages/main-assets/logo-github.svg">
     </div>
+
     <div class="filters" style="display: none">
-      <!-- Bloom -->
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg xmlns="http://www.w3.org/2000/svg">
         <filter id="bloom-filter">
           <feGaussianBlur in="SourceGraphic" stdDeviation="5"></feGaussianBlur>
           <feComposite in2="SourceGraphic" operator="arithmetic" k2=".3" k3="1" color-interpolation-filters="sRGB"></feComposite>
         </filter>
       </svg>
     </div>
+
+    <!-- Scripts (kept exactly as you requested) -->
     <script src="pages/components/tag.js" type="module"></script>
     <script src="pages/components/extension.js" type="module"></script>
     <script src="pages/components/panel-modal.js" type="module"></script>
