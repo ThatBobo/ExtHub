@@ -26,7 +26,7 @@ async function getRecentFiles() {
   const cached = checkCache();
   if (cached) return cached;
 
-  const repo = "SharkPool-SP/SharkPools-Extensions";
+  const repo = "ThatBobo/ExtHub";
   const headers = { Accept: "application/vnd.github+json" };
   const expiryMarker = getExpiryWeekMarker();
 
@@ -48,7 +48,7 @@ async function getRecentFiles() {
     const commitRes = await fetch(
       `https://api.github.com/repos/${repo}/commits/${commit.sha}`, { headers }
     );
-    if (!commitsRes.ok) {
+    if (!commitRes.ok) {
       console.warn("Failed to fetch GitHub commits", commitRes.status);
       return undefined;
     }
