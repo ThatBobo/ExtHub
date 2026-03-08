@@ -10,8 +10,21 @@
       "overrideLabeler": false,
       "isDeprecated": false,
       "date": ""
+    },
+
+    "StoryWeaver": {
+      "desc": "A storytelling tool that lets users write, manage, and switch between stories.",
+      "creator": "ThatBobo",
+      "url": "StoryWeaver.js",
+      "banner": "storyweaver.png",
+      "tags": ["All", "Utility"],
+      "status": "",
+      "overrideLabeler": false,
+      "isDeprecated": false,
+      "date": ""
     }
   },
+
   "extension-tags": [
     "All",
     "Utility",
@@ -29,6 +42,7 @@
     "PenguinMod Only",
     "Dangerous"
   ],
+
   "site": {
     "is up": true,
     "reset": false
