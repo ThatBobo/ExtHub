@@ -1,26 +1,20 @@
 {
   "extensions": {
+    "StoryWeaver": {
+      "desc": "A storytelling tool that lets users write, manage, and switch between stories.",
+      "creator": "ThatBobo",
+      "url": "StoryWeaver.js",
+      "banner": "StoryWeaver.svg",
+      "tags": ["Utility", "All"],
+      "date": "Last Updated: 03/08/2026"
+    },
+
     "Example": {
       "desc": "",
       "creator": "ThatBobo",
       "url": "Example.js",
       "banner": "Example.svg",
       "tags": ["All"],
-      "status": "",
-      "overrideLabeler": false,
-      "isDeprecated": false,
-      "date": ""
-    },
-
-    "StoryWeaver": {
-      "desc": "A storytelling tool that lets users write, manage, and switch between stories.",
-      "creator": "ThatBobo",
-      "url": "StoryWeaver.js",
-      "banner": "storyweaver.png",
-      "tags": ["All", "Utility"],
-      "status": "",
-      "overrideLabeler": false,
-      "isDeprecated": false,
       "date": ""
     }
   },
