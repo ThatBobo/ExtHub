@@ -4,9 +4,10 @@
 ## Step 1: Extension Format
 
 ### Requirements
-- Extensions must use the traditional PenguinMod extension format (no Turbobuilder or auto‑generated formats).
+- Extensions must use the traditional extension format below (no Turbobuilder or auto‑generated formats).
 - Code should be clean, readable, and use `Scratch.Cast` where appropriate.
 - Your extension ID should include your username.
+- Your extension function wrapper MUST use async.
 - Include a commented header at the top of your file with:
   - Name
   - ID
@@ -19,14 +20,14 @@
 ~~~~js
 // header metadata
 
-(function (Scratch) {
+(async function (Scratch) {
   "use strict";
 
   class Extension {
     // ...
   }
 
-  Scratch.extensions.register(Extension);
+  Scratch.extensions.register(new Extension);
 })(Scratch);
 ~~~~
 
