@@ -1,9 +1,10 @@
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open('bobo-cache').then(cache => {
+    caches.open('bobo-cache-4').then(cache => {
       return cache.addAll([
         'index.html',
-        'manifest.json'
+        'manifest.json',
+        'down.html'
       ]);
     })
   );
