@@ -17,11 +17,11 @@ function getCleanStorage() {
   localStorage.removeItem("extensions.turbowarp.org/local-storage:SP.extension.gal.DATA"); // remnant of the past
   let store = {};
   try {
-    store = JSON.parse(localStorage.getItem("SPgalleryInfo"));
+    store = JSON.parse(localStorage.getItem("TBgalleryInfo"));
     if (store === null) store = {};
   } catch {
     console.warn("Removing Malformed LocalStorage");
-    localStorage.removeItem("SPgalleryInfo");
+    localStorage.removeItem("TBgalleryInfo");
   }
   currentTags = Array.isArray(store.tag) ? store.tag : ["all"];
 
@@ -33,7 +33,7 @@ function getCleanStorage() {
 }
 
 function updateStorage() {
-  localStorage.setItem("SPgalleryInfo", JSON.stringify({
+  localStorage.setItem("TBgalleryInfo", JSON.stringify({
     tag: currentTags, pinnedExts: pins,
     downloadType, compress, eraseDeprecation,
     _cachedExtTags
@@ -85,7 +85,7 @@ function initGUI() {
   /* GitHub Button */
   const gitRepoBtn = document.querySelector(`img[class="navImgBig"][id="gitRepo"]`);
   gitRepoBtn.addEventListener("click", (e) => {
-    window.open("https://github.com/SharkPool-SP/SharkPools-Extensions");
+    window.open("https://github.com/ThatBobo/ExtHub");
     e.stopImmediatePropagation();
   });
 
